@@ -7,14 +7,22 @@
     private:
 
     double area,circumference,radius;
+
+
     
     public:
-    double Area(int radius)
+
+    double getvalue()
+    {
+        cout<<"\nenter radious value for circle:";
+        cin>>radius;
+    }
+    double Area()
     {
         area=3.14*radius*radius;
         cout<<"\nArea="<<area;
     }
-    double Circumference(double radius)
+    double Circumference()
     {
         circumference=2*3.14*radius;
         cout<<"\nCircumference="<<circumference;
@@ -24,13 +32,20 @@
 
  int main()
  {
-    
+    double area,circumference,radius;
     Circle c1,c2,c3;
-    c1.Area(12);
-    c2.Area(13);
-    c3.Area(14);
+    
+    c1.getvalue();
+    c1.Area();
+    c1.Circumference();
 
-    c1.Circumference(12);
-    c2.Circumference(13);
-    c3.Circumference(14);
+    c2.getvalue();
+    c2.Area();
+    c2.Circumference();
+
+    c3.getvalue();
+    c3.Area();
+    c3.Circumference();
+
+    
  }
