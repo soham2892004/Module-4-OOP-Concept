@@ -3,23 +3,26 @@ using namespace std;
 
 class MathOperations {
 public:
-    
-    int add(int a, int b) {
+int a,b;
+double x,y;
+float p,q;
+long m,n;
+    int add() {
         return a + b;
     }
 
     
-    double subtract(double x, double y) {
+    double subtract() {
         return x - y;
     }
 
     
-    float multiply(float p, float q) {
+    float multiply() {
         return p * q;
     }
 
     
-    long divide(long m, long n) {
+    long divide() {
         if (n != 0)
             return m / n;
         else {
@@ -31,12 +34,23 @@ public:
 
 int main() {
     MathOperations math;
+int a,b;
+double x,y;
+float p,q;
+long m,n;
+        cout<<"\nenter value of a and b:";
+        cin>>a>>b;
+        cout<<"\nenter value of x and y:";
+        cin>>x>>y;
+        cout<<"\nenter value of p and q:";
+        cin>>p>>q;
+        cout<<"\nenter value of m and n:";
+        cin>>m>>n;
 
-
-    cout << "Addition: " << math.add(10, 20) << endl;
-    cout << "Subtraction: " << math.subtract(15.5, 7.2) << endl;
-    cout << "Multiplication: " << math.multiply(3.14f, 2.5f) << endl;
-    cout << "Division: " << math.divide(100L, 5L) << endl;
+    cout << "Addition: " << math.add() << endl;
+    cout << "Subtraction: " << math.subtract() << endl;
+    cout << "Multiplication: " << math.multiply() << endl;
+    cout << "Division: " << math.divide() << endl;
 
     
 }
