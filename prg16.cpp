@@ -9,9 +9,12 @@ public:
     string state;
     string pincode;
 
+    void getInformation()
+    {
+        cout<<"enter street,city,state and pincode:";
+        cin>>street>>city>>state>>pincode;
+    }
     
-    Address(const string& s, const string& c, const string& st, const string& p)
-        : street(s), city(c), state(st), pincode(p) {}
 };
 
 class Student {
@@ -23,9 +26,13 @@ private:
     Address studentAddress; 
 
 public:
+    void getDetail()
+    {
+        cout<<"enter name,student class,roll number,marks:";
+        cin>>name>>studentClass>>rollNumber>>marks;
+    }
     
-    Student(const string& n, const string& cls, int roll, double m, const Address& addr)
-        : name(n), studentClass(cls), rollNumber(roll), marks(m), studentAddress(addr) {}
+    
 
     
     char calculateGrade() {
@@ -43,14 +50,15 @@ public:
     void displayInfo() {
         cout << "Name: " << name << "\tClass: " << studentClass << "\tRoll Number: " << rollNumber << endl;
         cout << "Marks: " << marks << "\tGrade: " << calculateGrade() << endl;
-        cout << "Address: " << studentAddress.street << ", " << studentAddress.city
-             << ", " << studentAddress.state << " - " << studentAddress.pincode << endl;
+        
     }
 };
 
 int main() {
-    Address studentAddr("123 Main St", "Cityville", "Stateville", "12345");
-    Student myStudent("utsav rakholiya", "12th Grade", 101, 85.5, studentAddr);
+    Address studentAddr;
+    studentAddr.getInformation();
+    Student myStudent;
+    myStudent.getDetail();
 
     myStudent.displayInfo();
 
