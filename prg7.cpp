@@ -8,11 +8,16 @@
         float length,width;
 
     public:
-        float Area(float length,float width)
+        float getvalue()
+        {
+            cout<<"\nenter value for length and width:";
+            cin>>length>>width;
+        }
+        float Area()
         {
             return length*width;
         }
-        float Perimeter(float length,float width)
+        float Perimeter()
         {
             return (length+width)*2;
         }
@@ -20,6 +25,9 @@
 int main()
 {
     Rectangle R1,R2,R3;
-    cout<<"Area of Rectangle 1,2 & 3:\t"<<R1.Area(15,16.4)<<"\t"<<R2.Area(14.3,12.5)<<"\t"<<R3.Area(5,6.5);
-    cout<<"\nPerimeter of Rectangle 1,2 & 3:\t"<<R1.Perimeter(15,16.4)<<"\t"<<R2.Perimeter(14.3,12.5)<<"\t"<<R3.Perimeter(5,6.5);
+    R1.getvalue();
+    R2.getvalue();
+    R3.getvalue();
+    cout<<"Area of Rectangle 1,2 & 3:\t"<<R1.Area()<<"\t"<<R2.Area()<<"\t"<<R3.Area();
+    cout<<"\nPerimeter of Rectangle 1,2 & 3:\t"<<R1.Perimeter()<<"\t"<<R2.Perimeter()<<"\t"<<R3.Perimeter();
 }
