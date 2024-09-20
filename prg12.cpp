@@ -6,13 +6,21 @@
  {
     private:
         double AccountNumber,Balance;
-        int Process;
+        int Process,Amount,Amount1;
 
     public:
-        BankAccount(double AcNo,double Bal):AccountNumber(AcNo),Balance(Bal){}
-
-    double deposit(double Amount)
-        {
+    double getdatail()
+    {
+        cout<<"\nenter Account Number:";
+        cin>>AccountNumber;
+        cout<<"\nenter user balance in account:";
+        cin>>Balance;
+    }
+    
+    double deposit()
+        {   
+            cout<<"\nenter Amount for deposit:";
+            cin>>Amount;
             if(Amount>0)
             {
                 return Balance+=Amount;
@@ -22,11 +30,13 @@
                 cout<<"Invalid deposit amount,Please Enter A Positive Value...";
             }
         }
-    double withdraw(double Amount)
-        {
-            if(Amount>0 && Amount<=Balance)
+    double withdraw()
+        {   
+            cout<<"\nenter Amount for withdraw:";
+            cin>>Amount1;
+            if(Amount1>0 && Amount1<=Balance)
             {
-                return Balance-Amount;
+                return Balance-=Amount1;
             }
             else
             {
@@ -42,12 +52,15 @@
 
  int main()
     {
-        BankAccount B1(12345,8000.00);
+        BankAccount B1;
+        B1.getdatail();
 
-        B1.deposit(400.00);
-        B1.withdraw(300.00);
-        B1.deposit(750.00);
-        B1.withdraw(1500.00);
+        
+    B1.withdraw();
+         B1.deposit();
+    B1.withdraw();
+         B1.deposit();
+
             B1.Display();
     }
  
