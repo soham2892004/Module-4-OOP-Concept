@@ -9,7 +9,11 @@ private:
 
 public:
     
-    Date(int d, int m, int y) : day(d), month(m), year(y) {}
+    void getDate1()
+    {
+        cout<<"enter date,month and year:";
+        cin>>day>>month>>year;
+    }
 
     
     void setDate(int d, int m, int y) {
@@ -40,7 +44,8 @@ public:
 };
 
 int main() {
-    Date myDate(3, 5, 2024); 
+    Date myDate;
+    myDate.getDate1(); 
 
     int d, m, y;
     myDate.getDate(d, m, y);
