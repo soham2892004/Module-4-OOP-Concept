@@ -7,6 +7,11 @@
         public:
         int no1,no2;
 
+        int getvalue()
+        {
+            cout<<"enter no1,no2:";
+            cin>>no1>>no2;
+        }
         int Addition()
         {
             return no1+no2;
@@ -31,8 +36,7 @@
  int main()
  {
     Calculator c1;
-    c1.no1=50;
-    c1.no2=40;
+    c1.getvalue();
     cout<<"Adition of no.1 &no.2:"<<c1.Addition()<<endl;
     cout<<"Subtraction of no.1 &no.2:"<<c1.Subtraction()<<endl;
     cout<<"Multiplication of no.1 &no.2:"<<c1.Multiplication()<<endl;
