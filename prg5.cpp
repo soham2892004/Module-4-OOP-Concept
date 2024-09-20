@@ -10,11 +10,15 @@ public:
     string accountType;
     double balance;
 
-    void assignValues(string name, int accountNumber, string accountType, double balance) {
-        this->name = name;
-        this->accountNumber = accountNumber;
-        this->accountType = accountType;
-        this->balance = balance;
+    void assignValues() {
+        cout<<"enter AccountHolder name:";
+        cin>>name;
+        cout<<"enter AccountNumber:";
+        cin>>accountNumber;
+        cout<<"enter AccountType:";
+        cin>>accountType;
+        cout<<"enter Balance in user Account:";
+        cin>>balance;
     }
 
     void deposit(double amount) {
@@ -41,7 +45,7 @@ public:
 
 int main() {
     BankAccount account;
-    account.assignValues("MR.Soham Parmar", 123456, "Savings", 1000.0);
+    account.assignValues();
 
     account.deposit(500.0);
     account.withdraw(200.0);
