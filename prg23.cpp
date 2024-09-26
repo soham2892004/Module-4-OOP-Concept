@@ -1,5 +1,4 @@
- #include <iostream>
-
+#include <iostream>
 using namespace std;
 
 class Person {
@@ -7,7 +6,6 @@ protected:
     string name;
 
 public:
-    
     Person(const string& n) : name(n) {
         cout << "Person constructor called for " << name << endl;
     }
@@ -18,7 +16,6 @@ protected:
     int rollNumber;
 
 public:
-
     Student(const string& n, int roll) : Person(n), rollNumber(roll) {
         cout << "Student constructor called for roll number " << rollNumber << endl;
     }
@@ -29,7 +26,6 @@ private:
     double marks;
 
 public:
-    
     Result(const string& n, int roll, double m) : Student(n, roll), marks(m) {
         cout << "Result constructor called for marks " << marks << endl;
     }
@@ -40,8 +36,21 @@ public:
 };
 
 int main() {
-    Result myResult("vanraj chavda", 101, 85.5);
+    string studentName;
+    int studentRoll;
+    double studentMarks;
+
+    cout << "Enter student name: ";
+    cin >> studentName;
+
+    cout << "Enter student roll number: ";
+    cin >> studentRoll;
+
+    cout << "Enter student marks: ";
+    cin >> studentMarks;
+
+    Result myResult(studentName, studentRoll, studentMarks);
     myResult.displayResult();
 
-
+    
 }
