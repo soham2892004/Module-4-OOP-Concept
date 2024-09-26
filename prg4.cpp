@@ -5,32 +5,40 @@
     class Calculator
     {
         public:
-        int no1,no2;
+        float no1,no2;
 
-        int getvalue()
+        float getvalue()
         {
             cout<<"enter no1,no2:";
             cin>>no1>>no2;
         }
-        int Addition()
+        float Addition()
         {
             return no1+no2;
         }
-        int Subtraction()
+        float Subtraction()
         {
             return no1-no2;
         }
-        int Multiplication()
+        float Multiplication()
         {
             return no1*no2;
         }
-        int Divison()
+        float Divison()
         {
             return no1/no2;
         }
-        int Modulo()
+        float Modulo()
         {
-            return no1%no2;
+        if (no2 != 0) 
+        {
+            return (int)no1 % (int)no2;
+        }
+        else
+        {
+            cout << "Error: Modulo by zero!" << endl;
+            return 0; 
+        }
         }
     };
  int main()
