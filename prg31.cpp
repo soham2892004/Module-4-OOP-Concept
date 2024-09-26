@@ -1,12 +1,13 @@
- #include <iostream>
+#include <iostream>
 
+using namespace std;
 
 template <typename T>
-void bubbleSort(T arr[], int size) {
-    for (int i = 0; i < size - 1; ++i) {
-        for (int j = 0; j < size - i - 1; ++j) {
-            if (arr[j] > arr[j + 1]) {
-                
+void bubbleSort(T arr[], int n) {
+    for (int i = 0; i < n - 1; i++) {
+        for (int j = 0; j < n - i - 1; j++) {
+            if (arr[j] > arr[j + 1]) 
+ {
                 T temp = arr[j];
                 arr[j] = arr[j + 1];
                 arr[j + 1] = temp;
@@ -16,22 +17,31 @@ void bubbleSort(T arr[], int size) {
 }
 
 int main() {
-    const int size = 5;
-    int intArray[size] = {5, 2, 9, 1, 7};
+    int  intArray[] = {5, 2, 9, 1, 7};
+    double doubleArray[] = {3.14, 1.5, 2.718, 0.5};
+    string stringArray[] = {"apple", "banana", "cherry", "date"};
 
-    std::cout << "Before sorting:" << std::endl;
-    for (int i = 0; i < size; ++i) {
-        std::cout << intArray[i] << " ";
+    int intSize = sizeof(intArray) / sizeof(intArray[0]);
+    int doubleSize = sizeof(doubleArray) / sizeof(doubleArray[0]);
+    int stringSize = sizeof(stringArray) / sizeof(stringArray[0]);
+
+    cout << "Before sorting int array: ";
+    for (int i = 0; i < intSize; i++) {
+        cout << intArray[i] << " ";
     }
-    std::cout << std::endl;
+    cout << endl;
+
+    bubbleSort(intArray, intSize);
+
+    cout << "After sorting int array: ";
+    for (int i = 0; i < intSize; i++) {
+        cout << intArray[i] << " ";
+    }
+    cout << endl;
 
     
-    bubbleSort(intArray, size);
+    bubbleSort(doubleArray, doubleSize);
+    bubbleSort(stringArray, stringSize);
 
-    std::cout << "After sorting:" << std::endl;
-    for (int i = 0; i < size; ++i) {
-        std::cout << intArray[i] << " ";
-    }
-    std::cout << std::endl;
-
+    
 }
