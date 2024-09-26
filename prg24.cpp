@@ -10,15 +10,15 @@ public:
         return a + b;
     }
 
-    double subtract() {
+    int subtract() {
         return a - b;
     }
 
-    float multiply() {
+    int multiply() {
         return a * b;
     }
 
-    long divide() {
+    float divide() {
         if (q != 0)
             return p / q;
         else {
