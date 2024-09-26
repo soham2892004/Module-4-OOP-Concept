@@ -1,5 +1,4 @@
- #include <iostream>
-
+#include <iostream>
 using namespace std;
 
 class Person {
@@ -30,7 +29,7 @@ public:
     Student(const string& n, int a, double p) : Person(n, a), percentage(p) {}
 
     void readStudentData() {
-        readData(); 
+        readData();
         cout << "Enter percentage: ";
         cin >> percentage;
     }
@@ -49,7 +48,7 @@ public:
     Teacher(const string& n, int a, double s) : Person(n, a), salary(s) {}
 
     void readTeacherData() {
-        readData(); 
+        readData();
         cout << "Enter salary: ";
         cin >> salary;
     }
@@ -61,14 +60,42 @@ public:
 };
 
 int main() {
-    Student myStudent("harvik mendapara", 35, 85.5);
-    Teacher myTeacher("amit sharma", 25, 60000.0);
+    
+    cout << "Enter student details:\n";
+    string studentName;
+    int studentAge;
+    double studentPercentage;
 
+    cout << "Student name: ";
+    cin >> studentName;
+    cout << "Student age: ";
+    cin >> studentAge;
+    cout << "Student percentage: ";
+    cin >> studentPercentage;
+
+    Student myStudent(studentName, studentAge, studentPercentage);
+
+    
+    cout << "\nEnter teacher details:\n";
+    string teacherName;
+    int teacherAge;
+    double teacherSalary;
+
+    cout << "Teacher name: ";
+    cin >> teacherName;
+    cout << "Teacher age: ";
+    cin >> teacherAge;
+    cout << "Teacher salary: ";
+    cin >> teacherSalary;
+
+    Teacher myTeacher(teacherName, teacherAge, teacherSalary);
+
+    
     cout << "\nStudent Details:\n";
     myStudent.displayStudentData();
 
     cout << "\nTeacher Details:\n";
     myTeacher.displayTeacherData();
 
-    
+    return 0;
 }
