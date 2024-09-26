@@ -1,30 +1,26 @@
- #include <iostream>
+#include <iostream>
 using namespace std;
 
 class MathOperations {
 public:
-int a,b;
-double x,y;
-float p,q;
-long m,n;
+    int a, b;
+    float p, q;
+
     int add() {
         return a + b;
     }
 
-    
     double subtract() {
-        return x - y;
+        return a - b;
     }
 
-    
     float multiply() {
-        return p * q;
+        return a * b;
     }
 
-    
     long divide() {
-        if (n != 0)
-            return m / n;
+        if (q != 0)
+            return p / q;
         else {
             cout << "Error: Division by zero!" << endl;
             return 0;
@@ -34,23 +30,17 @@ long m,n;
 
 int main() {
     MathOperations math;
-int a,b;
-double x,y;
-float p,q;
-long m,n;
-        cout<<"\nenter value of a and b:";
-        cin>>a>>b;
-        cout<<"\nenter value of x and y:";
-        cin>>x>>y;
-        cout<<"\nenter value of p and q:";
-        cin>>p>>q;
-        cout<<"\nenter value of m and n:";
-        cin>>m>>n;
+
+    cout << "Enter value of a and b: ";
+    cin >> math.a >> math.b;
+
+    cout << "Enter value of p and q: ";
+    cin >> math.p >> math.q;
 
     cout << "Addition: " << math.add() << endl;
     cout << "Subtraction: " << math.subtract() << endl;
     cout << "Multiplication: " << math.multiply() << endl;
     cout << "Division: " << math.divide() << endl;
 
-    
+
 }
