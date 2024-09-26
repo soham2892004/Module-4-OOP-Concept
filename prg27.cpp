@@ -1,25 +1,22 @@
 #include <iostream>
-#include <cmath>
+
 using namespace std;
 
 class AreaCalculator {
 public:
-    
-    double calculateArea(double radius) {
+    double calculateArea1(double radius) {
         return 3.14159 * radius * radius;
     }
 
-    
-    double calculateArea(double length, double breadth) {
+    double calculateArea2(double length, double breadth) {
         return length * breadth;
     }
 
-    
-    double calculateArea(double base, double height, bool isTriangle = true) {
+    double calculateArea3(double base, double height, bool isTriangle = true) {
         if (isTriangle)
             return 0.5 * base * height;
         else
-            return -1.0; 
+            return base * height; 
     }
 };
 
@@ -32,9 +29,9 @@ int main() {
     double triangleBase = 8.0;
     double triangleHeight = 3.0;
 
-    cout << "Area of circle: " << calculator.calculateArea(circleRadius) << endl;
-    cout << "Area of rectangle: " << calculator.calculateArea(rectangleLength, rectangleBreadth) << endl;
-    cout << "Area of triangle: " << calculator.calculateArea(triangleBase, triangleHeight) << endl;
+    cout << "Area of circle: " << calculator.calculateArea1(circleRadius) << endl;
+    cout << "Area of rectangle: " << calculator.calculateArea2(rectangleLength, rectangleBreadth) << endl;
+    cout << "Area of triangle: " << calculator.calculateArea3(triangleBase, triangleHeight) << endl;
 
-
+    
 }
