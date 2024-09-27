@@ -18,8 +18,8 @@ public:
 int main() {
     int a, b;
 
-    std::cout << "Enter two numbers: ";
-    std::cin >> a >> b;
+    cout << "Enter two numbers: ";
+    cin >> a >> b;
 
     NumberPair pair{a, b}; 
     int max = MaxNumberFinder::findMax(pair);
